@@ -28,5 +28,15 @@
       * pg
       * dotenv
     * Create knexfile.js
+    ```sh
+    npx knex init
+    ```
   * [ ] Create migrations
+    ```sh
+    npx knex migrate:make initial
+    ```
+  * [ ] Create seeds
+    ```sh
+    npx knex seed:make 01-initial
+    ```
 
