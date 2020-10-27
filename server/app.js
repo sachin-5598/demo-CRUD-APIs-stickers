@@ -14,6 +14,8 @@ app.use(helmet());
 app.use(compression());
 app.use(cors());
 app.use(express.json());
+// only when the APIs are accepting data directly from forms not javascript 
+//app.use(express.urlencoded({ extended: false }));
 
 // routes and routers
 app.get('/', (req, res) => {
