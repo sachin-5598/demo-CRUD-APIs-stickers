@@ -10,8 +10,8 @@
 ![alt](https://lucid.app/publicSegments/view/36247a7a-70dd-407a-b8d4-a0998c20f188/image.png)
 
 ## Server Check List
-* [ ] Create a server folder
-  * [ ] Generate express app
+* [x] Create a server folder
+  * [x] Generate express app
     * Install
       * express
       * morgan
@@ -20,9 +20,9 @@
       * cors
       * nodemon
     * Setup error handlers
-  * [ ] Setup database
+  * [x] Setup database
     * Create docker-compose.yml
-  * [ ] Initialize knex
+  * [x] Initialize knex
     * Install
       * knex
       * pg
@@ -31,11 +31,11 @@
     ```sh
     npx knex init
     ```
-  * [ ] Create migrations
+  * [x] Create migrations
     ```sh
     npx knex migrate:make initial
     ```
-  * [ ] Create seeds
+  * [x] Create seeds
     ```sh
     npx knex seed:make 01-initial
     ```
