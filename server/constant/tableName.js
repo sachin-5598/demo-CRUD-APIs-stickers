@@ -1,0 +1,3 @@
+module.exports = {
+  sticker: 'sticker'
+};
