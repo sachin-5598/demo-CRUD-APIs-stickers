@@ -2,9 +2,11 @@ const express = require('express');
 
 const router = express.Router();
 
+const queries = require('../db/queries/stickers');
+
 router.get('/', (req, res) => {
-  res.json({
-    message: 'This is the stickers API'
+  queries.getAll().then((stickers) => {
+    res.json(stickers);
   });
 });
 
