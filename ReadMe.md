@@ -39,4 +39,12 @@
     ```sh
     npx knex seed:make 01-initial
     ```
-
+* [x] Create a api folder
+  * [x] Create/Mount a router for all sticker table api
+* [x] Create APIs
+  * Create a connection file for the app 
+  * Create a query folder
+  * [ ] List all records with GET /api/v1/sticker
+    * Create route
+    * Create query
+    * Add test

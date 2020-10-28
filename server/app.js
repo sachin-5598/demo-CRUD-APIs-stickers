@@ -3,8 +3,10 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const compression = require('compression');
 const cors = require('cors');
+require('dotenv').config();
 
 const { notFound, errorHandler } = require('./middleware/errorHandler');
+const stickers = require('./api/stickers');
 
 const app = express();
 
@@ -23,6 +25,8 @@ app.get('/', (req, res) => {
     message: 'Express app working'
   });
 });
+
+app.use('/api/v1/sticker', stickers);
 
 // error handler
 app.use(notFound);
