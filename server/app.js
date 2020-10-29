@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use('/api/v1/sticker', stickers);
+app.use('/api/v1/stickers', stickers);
 
 // error handler
 app.use(notFound);

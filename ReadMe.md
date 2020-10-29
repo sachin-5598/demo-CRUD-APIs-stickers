@@ -56,7 +56,7 @@
     * Create before() function
       * Rollback all migration on the test DB
       * Run fresh migrations/seeds on test DB
-  * [ ] List all records with GET /api/v1/sticker
+  * [x] List all records with GET /api/v1/stickers
     * Create route
     * Create query
     * Add test
