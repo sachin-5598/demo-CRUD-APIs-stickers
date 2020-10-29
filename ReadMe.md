@@ -44,6 +44,18 @@
 * [x] Create APIs
   * Create a connection file for the app 
   * Create a query folder
+  * [x] Setup Tests
+    * Install
+      * mocha
+      * chai
+      * supertest
+    * Add a test database connection
+    * Create a test folder
+    * Add npm test script
+      * Set NODE_ENV=test
+    * Create before() function
+      * Rollback all migration on the test DB
+      * Run fresh migrations/seeds on test DB
   * [ ] List all records with GET /api/v1/sticker
     * Create route
     * Create query
