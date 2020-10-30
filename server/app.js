@@ -6,12 +6,12 @@ const cors = require('cors');
 require('dotenv').config();
 
 const { notFound, errorHandler } = require('./middleware/errorHandler');
-const stickers = require('./api/stickers');
+const stickers = require('./api/v1/stickers');
 
 const app = express();
 
 // middlewares
-app.use(morgan('common'));
+app.use(morgan('tiny'));
 app.use(helmet());
 app.use(compression());
 app.use(cors());

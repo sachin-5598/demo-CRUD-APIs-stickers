@@ -1,9 +1,6 @@
-const request = require('supertest');
-const expect = require('chai').expect;
 const knex = require('../db/connection');
 
-const app = require('../app');
-const fixtures = require('./fixtures');
+const api_v1_stickers = require('./api/v1/stickers');
 
 describe('CRUD Stickers', () => {
   before((done) => {
@@ -21,15 +18,42 @@ describe('CRUD Stickers', () => {
   });
 
   it('Should List all records', (done) => {
-    request(app)
-      .get('/api/v1/stickers')
-      .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
-      .expect(200)
-      .then((response) => {
-        expect(response.body).to.be.a('array');
-        expect(response.body).to.deep.equal(fixtures.stickers);
-        done();
-      });
+    api_v1_stickers.ListAllStickers(done);
+  });
+  it('Should Show one records by ID', (done) => {
+    api_v1_stickers.ShowOneStickerByID(done);
+  });
+  it('Should not return record and Show (422) for not valid ID', (done) => {
+    api_v1_stickers.Show422ifIdNotValid(done);
+  });
+  it('Should not return record and Show (404 - Not Found) if ID does not exist', (done) => {
+    api_v1_stickers.Show404ifNoSticker(done);
+  });
+  it('Should Create a record with valid sticker', (done) => {
+    api_v1_stickers.CreateSticker(done);
+  });
+  it('Should not Create record and Show (422) for not valid sticker', (done) => {
+    api_v1_stickers.Show422ifStickerNotValid(done);
+  });
+  it('Should Update a record with valid updates', (done) => {
+    api_v1_stickers.UpdateSticker(done);
+  });
+  it('Should not Update record and Show (422) for not valid ID', (done) => {
+    api_v1_stickers.Show422ifUpdateIdNotValid(done);
+  });
+  it('Should not Update record and Show (422) for not valid updates', (done) => {
+    api_v1_stickers.Show422ifUpdateNotValid(done);
+  });
+  it('Should not Update record and Show (404 - Not Found) if ID does not exist', (done) => {
+    api_v1_stickers.Show404ifNoStickerToUpdate(done);
+  });
+  it('Should Delete a record with valid ID', (done) => {
+    api_v1_stickers.DeleteSticker(done);
+  });
+  it('Should not Delete record and Show (422) for not valid ID', (done) => {
+    api_v1_stickers.Show422ifDeleteIdNotValid(done);
+  });
+  it('Should not Delete record and Show (404 - Not Found) if ID does not exist', (done) => {
+    api_v1_stickers.Show404ifNoStickerToDelete(done);
   });
 });

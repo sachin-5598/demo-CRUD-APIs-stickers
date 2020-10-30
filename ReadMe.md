@@ -59,4 +59,25 @@
   * [x] List all records with GET /api/v1/stickers
     * Create route
     * Create query
-    * Add test
+    * Add tests
+  * [x] Show one record with GET /api/v1/stickers/:id
+    * Create route
+    * Validate id middleware
+    * Create query
+    * Add tests
+  * [x] Create a record with POST /api/v1/stickers
+    * Create route
+    * Validate body middleware
+    * Create query
+    * Add tests
+  * [x] Update a record with PUT /api/v1/stickers/:id
+    * Create route
+    * Validate id middleware
+    * Validate body/updates middleware
+    * Create query
+    * Add tests
+  * [x] Delete a record with DELETE /api/v1/stickers/:id
+    * Create route
+    * Validate id middleware
+    * Create query
+    * Add tests

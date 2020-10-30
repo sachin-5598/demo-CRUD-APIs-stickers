@@ -71,6 +71,14 @@ const stickers = [
   }
 ];
 
+const sticker = {
+  "title": "Chrome",
+  "description": "Chrome logo",
+  "rating": 7.5,
+  "url": "https://devstickers.com/assets/img/cat/chrome.png"
+}
+
 module.exports = {
-  stickers
+  stickers,
+  sticker
 };
