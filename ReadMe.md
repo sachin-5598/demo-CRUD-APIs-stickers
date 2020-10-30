@@ -1,7 +1,7 @@
 # Demo Node.js Express JSON API - CRUD Stickers
 
 ## We will be using:
-  * Postgres for our database
+  * Postgres for our database (using Docker)
   * knex.js for our database migrations, seeds and queries
   * express.js for our JSON routes
   * Mocha, Chai and SuperTest to test our routes
