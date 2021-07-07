@@ -33,6 +33,7 @@
     ```
   * [x] Create migrations
     ```sh
+    asdsd
     npx knex migrate:make initial
     ```
   * [x] Create seeds
